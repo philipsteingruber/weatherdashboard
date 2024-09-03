@@ -34,6 +34,11 @@ def index(request):
     if not city:
         city = 'Gothenburg'
 
+    try:
+        geolocator.geocode(city).longitude
+    except AttributeError:
+        city = 'Gothenburg'
+
     weather_data = get_weather(city)
     current_time = get_local_time(city)
     country = get_country(city)
