@@ -1,0 +1,72 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="bg-gradient-to-br from-gray-500 to-gray-900 bg-cover h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeatherDashboard</title>
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet">
+</head>
+<body class="text-white">
+<header class="mb-10">
+    <section class="flex justify-between items-center mx-auto max-w-[33%] mt-2 border-4 border-solid p-[12px] rounded-2xl">
+        <form action="/" method="GET">
+            <input type="text" name="q" class="rounded-2xl h-12 w-80 pl-5 placeholder:font-semibold font-semibold text-xl text-slate-800 focus:border-none drop-shadow"
+                   placeholder="Search for a City">
+        </form>
+        <button class="rounded-2xl bg-green-600 w-60 h-12 text-xl font-semibold hover:opacity-80 active:opacity-80 focus:opacity-80 drop-shadow">📍 Current position</button>
+    </section>
+</header>
+<main class="flex flex-col justify-between h-[90%] mt-0">
+    <div class="flex flex-row m-2 h-[45%]">
+        <section class="w-[58%] mx-auto flex flex-col items-center border-2 border-solid rounded-3xl min-h-96 py-5 justify-center">
+            <h1 class="text-7xl font-semibold mb-16">{{ city }}, {{ country }}</h1>
+            <h1 class="text-6xl font-semibold">{{ current_time }}</h1>
+        </section>
+        <section class="w-[38%] mx-auto flex flex-row justify-between p-5 items-center border-2 border-solid rounded-3xl min-h-96">
+            <div class="flex flex-col">
+                <h1>24 degrees</h1>
+                <h1>Sunrise</h1>
+            </div>
+            <div>
+                SUN
+            </div>
+            <div class="flex flex-col">
+                <h1>HUMIDITY</h1>
+                <h1>PRESSURE</h1>
+            </div>
+            <div class="flex flex-col">
+                <h1>WIND</h1>
+                <h1>UV</h1>
+            </div>
+        </section>
+    </div>
+    <div class="flex flex-row m-2 h-[45%]">
+        <section class="w-[38%] mx-auto flex flex-col items-center border-2 border-solid rounded-3xl min-h-96 py-5">
+            <h1 class="text-5xl font-semibold">5 Days Forecast:</h1>
+        </section>
+        <section class="w-[58%] my-auto mx-auto flex flex-col justify-between p-5 items-center border-2 border-solid rounded-3xl min-h-96">
+            <h1>Past 5 days</h1>
+            <div class="flex flex-row justify-between mx-auto ">
+                <div class="flex flex-col">
+                    <h1>24 degrees</h1>
+                    <h1>Sunrise</h1>
+                </div>
+                <div>
+                    SUN
+                </div>
+                <div class="flex flex-col">
+                    <h1>HUMIDITY</h1>
+                    <h1>PRESSURE</h1>
+                </div>
+                <div class="flex flex-col">
+                    <h1>WIND</h1>
+                    <h1>UV</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>
