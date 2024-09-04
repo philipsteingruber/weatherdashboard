@@ -580,12 +580,24 @@ video {
   margin-bottom: 4rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mt-0 {
   margin-top: 0px;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -626,6 +638,10 @@ video {
 
 .w-\[58\%\] {
   width: 58%;
+}
+
+.min-w-\[25\%\] {
+  min-width: 25%;
 }
 
 .max-w-\[33\%\] {
@@ -710,6 +726,15 @@ video {
 
 .pl-5 {
   padding-left: 1.25rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl {
